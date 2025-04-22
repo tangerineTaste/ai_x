@@ -1,0 +1,50 @@
+1절. txt파일에 데이ㅓ 저장하고 불러오기
+    mode : 'r' 또는 'rt' : text읽기 모드
+        'w' 또는 'wt' : text쓰기 모드(덮어쓰기,파일이 없으면 생성)
+        'a' 또는 'at' : text추가 모드(추가하기,파일이 없으면 생성)
+        'rb' : 바이너리읽기 모드
+        'wb' : 바이너리 쓰기 모드
+        'ab' : 바이너리 추가 모드
+      읽기모드에서는 파일이 없으면 예외, 쓰기모드에서는 폴더가 없으면 예외
+    encoding
+        euc-kr (한글완성형) 믜x
+        cp949  (확장된 한글완성형) : open()함수 기본 encoding방식(window)
+        utf-8  (한글조합형): open()함수 기본 encoding방식(mac, Linux)
+
+2절. 피클을 이용한 객체 저장 및 불러오기
+    머신러닝 모델을 저장할 때 피클을 사용한다
+    import pickle 을 사용하여 피클 임포트
+    open('data/ch09_member.data', 'wb') #피클은 바이너리 파일이기 때문에 'wb','rb','ab' 를 사용한다
+    저장하기 : dump
+    불러오기 : load
+
+
+1. *txt
+    김회원, 33, 아무동9
+    이회원, 22, 무시기동8
+
+2. pickle파일(*.data) : 객체리스트 저장, (머신러닝모델저장용)
+
+3. *.csv
+    name,age,address
+    "김회원","33","아무동9"
+    "이회원","22","무시기동8"
+
+4. *.json
+    [{'name':'김회원','age':33,'address':'아무동9'},
+    {'name':'이회원','age':22,'address':'무시기동8'}]
+
+5. *.h5 혹은 *.hdf5(=> 딥러닝 모델 저장)
+    HDVview로 읽을 수 있음
+
+6. *.xml
+    <customer>
+        <name>김회원</name>
+        <age>33</age>
+        <address>아무동9</address>
+    </customer>
+    <customer>
+        <name>이회원</name>
+        <age>22</age>
+        <address>무시기동8</address>
+    </customer> 
