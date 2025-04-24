@@ -18,6 +18,18 @@
     저장하기 : dump
     불러오기 : load
 
+3절. CSV형식 파일 읽기/쓰기 
+    csv->리스트데이터 : reader = csv.reader(f)
+    리스트데이터->csv : writer = csv.writer(f)
+    csv->딕셔너리리스트 : dict_reader = csv.DictReader(f)
+    딕셔너리리스트->csv : dict_writer = csv.DictWriter(f)
+
+4절. json 데이터 저장하고 불러오기
+    딕셔너리리스트->json : json.dump([딕셔너리리스트],f)
+    json->딕셔너리리스트 : load_data = json.load(f)
+    객체리스트->json : json.dump([객체리스트],f)
+    json->객체리스트 : load_data = json.load(f) (객체를 딕셔너리로 반환하는 함수를 사용하여 입력. 순서: 객체 -> 딕셔너리 -> json)
+
 
 1. *txt
     김회원, 33, 아무동9
