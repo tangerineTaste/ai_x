@@ -22,6 +22,44 @@ Numpy 패키지 함수들
    np.arange(from, stop, by, dtype) : from부터 stop앞까지 by씩 증감하는 정수 배열
    np.linspace(from, to, count) : from부터 to까지(to포함) count개 숫자를 1차원 배열
 
--배열 차원 변경
-   reshape()
+- 배열 차원 변경
+   reshape([면수],행수,열수): -1 사용하면 자동계산
+   resize( tup ) : -1 불가
    ravel(), flatten() : 1차원 변경
+   transpose(), T : 전치행렬
+   ary[:, np.newaxis] == np.expand_dims(ary,axis) 차원증가
+   
+
+- 배열 연산
+   np.min(a) : a의 전체의 최솟값
+   np.max(a) : a의 전체의 최대값
+   np.mean(a) : a의 전체의 평균
+   np.var(a) : a의 전체의 분산
+   np.std(a) : a의 전체의 표준편차
+
+   요소별 연산, 브로드케스팅
+   행렬연산(2차원) @(dot함수), 단위행렬(정방행렬)
+   범용함수 np.add(), np.multiply(), np.substract(), np.sqrt()
+   
+- 배열 합치기 
+   np.vstack(tup)
+   np.hstack(tup)
+   np.dstack(tup) : 마지막 축(열)들끼리 합침
+
+   np.column_stack(tup): 1차원 배열을 열단위로 배열하여 2차원으로 합침
+   np.row_stack(tup): 행단위로 합침
+   np.stack(tup, axis)
+
+   np.r_[a,b,...] : row단위로 쌓음
+   np.c_[a,b,...] : 컬럼으로 쌓아서 합침
+
+- 배열 분리하기
+   np.vsplit(ary, 정수나 벡터) : 첫번째 축을 따라 분할
+   np.hsplit(ary, 정수나 벡터) : 두번째 축을 따라 분할
+   np.dsplit(ary, 정수나 벡터) : depth따라 나눔(3차원 이상에서만 동작)
+   np.split(ary, 갯수나 인덱스벡터, axis)
+      axis=0 : vsplit()과 동일
+      axis=1 : hsplit()과 동일
+      axis=2 : 3차원 이상에서만 동작. dsplit()과 동일
+   np.array_split(ary, 갯수가 인덱스벡터, axis)
+      split과의 차이점은 나눠지지 않은 정수로도 사용 가능
