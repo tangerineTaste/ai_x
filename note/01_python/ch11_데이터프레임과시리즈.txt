@@ -4,3 +4,97 @@
     - 판다스의 장점 : 파일 I/O, 부분 데이터 추출, 크기변경, 데이터 변경|분할|병합|정렬|분할, 결측치 처리, 피벗과 언피벗(와이드포맷과 롱포맷)에 용이
 
 2절. 데이터프레임 만들기
+    딕셔너리 : pd.DataFrame(딕셔너리)
+    리스트   : pd.DataFrame(2차원 리스트)
+    파일     : pd.read_파일확장자(파일위치)
+    파일 예시 )   pd.read_csv(aa.csv)
+
+3절. 이름(열, 행) 지정하기
+    열 이름 : 데이터프레임.columns = ['이름지정'] # 리스트
+    행 이름 : 데이터프레임.index = ['이름지정'] # 리스트
+    
+    열 레벨 이름 : 데이터프레임.columns.names = ['이름지정'] # 리스트, 2차원 리스트도 가능
+    행 레벨 이름 : 데이터프레임.index.names = ['이름지정'] # 리스트
+
+4절. 부분데이터 조회
+    열 조회 : 데이터프레임[열이름], 데이터프레임[[열이름,열이름]]
+    loc 조회 : 데이터프레임.loc[행이름, 열이름]
+               데이터프레임.loc[행이름1:행이름2, 열이름1:열이름2] ※ 행이름2, 열이름2 포함됨
+
+5절. 데이터 추가 및 삭제
+    단일 행 삭제 : 데이터프레임.drop(행이름)
+    복수 행 삭제 : 데이터프레임.drop([행이름1, 행이름2])
+    열 삭제 : 데이터프레임.drop(열이름, axis=1) # 복수 열 삭제시 열이름 리스트로
+    열 추가(공통된 값) : 데이터프레임[열이름] = 값
+    열 추가(리스트 값) : 데이터프레임[열이름] = [리스트데이터]
+    열 추가(시리즈 값) : 데이터프레임[열이름] = pd.Series(값, index=행이름)
+    행 추가 : pd.concat([데이터프레임1, 데이터프레임2])
+    인덱스 재조정 : 데이터프레임.reset_index()
+    
+6절. 병합과 연결
+    데이터프레임1.merge(데이터프레임2, how=, ) # defualt : how = inner  양쪽 다 일치하는 데이터만 합침
+    pd.concat([df1,df2], axis)
+        axis = 0 : 위아래로 연결
+        axis = 1 : 좌우로 연결 (행 숫자가 동일해야 함)
+
+7절. 정렬(행이름, 열이름, 값에 의한 정렬)
+    데이터프레임.sort_index(axis)
+        axis = 0 : 행이름으로 정렬
+        axis = 1 : 열이름으로 정렬
+    데이터프레임.sort_values(by=정렬기준이 될 열이름, acending=T/F, inplace=T/F) : 값에 의한 정렬
+        acending = True : 오름차순 #default
+        acending = False : 내림차순
+        inplace = True : 데이터프레임에 정렬된 값 적용
+        inplace = False : 데이터프레임에 적용하지는 않고 반환 함 #default
+    
+8절. 기초 통계 분석
+    count : NaN을 제외한 갯수
+    min : 최소값
+    max : 최대값
+    sum : 합
+    cumsum : 누적합
+    cuprod : 누적곱
+    mean : 평균
+    rolling(n).mean() : 데이터 변동(노이즈)이 다소 있을 때, 추세(패턴)를 부드럽게 보고싶을 때
+    median : 중위수 (50%지점)
+    quantile : 분위수(0사분위수(0%), 1사분위수(25%), 2사분위수(50%), 3사분위수(75%), 4사분위수(100%)
+    max - Q3 - Q2 -Q1 - min
+    IQR = Q3-Q1
+    Q1-1.5xIQR ~ Q3+1.5xIQR
+    var : 분산
+    std : 표준편차
+    describe : 요약통계량
+    corr : 상관관계(계수)
+    cov : 공분산
+
+9절. 데이터 그룹화 및 집계
+    방법1 : 데이터프레임.groupby(열이름) # 그룹 된 값 리턴
+    방법2 : 데이터프레임.pivot_table(index=그룹핑할열, value=열이름, aggfunc=적용할 통계 함수)
+    다중열로 그룹화 : 데이터프레임.ravel(리스트값)
+
+10절. 데이터 구조 변경(와이드포맷 <-> 롱포맷)
+    와이드포맷->롱포맷 : 데이터프레임.melt(id_vars=열이름, var_name='변수명', value_name='값')
+                        id_vars값만 열로 남기고 
+                        var_name이라는 열에 와이드포맷에 있던 열이름들이 들어가고 
+                        value_name이라는 열에 값이 들어간다
+    롱포맷 -> 와이드포맷 : 데이터프레임.pivot_table(index, columns, values)
+
+11절. 데이터프레임(시리즈)에 함수 적용시키기
+    apply(func, axis) : 축요서별(요소별) 함수 적용 (데이터프레임이나 시리즈에서 함수 적용)
+    applymap(func) : 각 요소별 함수 적용(데이터프레임에서만 가능)
+    map(func, list) : 각 요소별 함수 적용(1차원 리스트, 시리즈에서만 가능)
+
+12절. 일괄변경(결측치, 특정값)
+    fillna
+        데이터프레임.fillna(값) : 데이터프레임에 결측치를 값으로 대체
+        데이터프레임.fillna(method='ffill') : ffill 이전 행의 값으로 대체, 없다면 NaN
+        데이터프레임.fillna(method='bfill') : bfill  다음행의 값으로 대체
+    replace(to_value, new_value,inplace=T/F)
+        to_value를 new_value로 바꿈
+        to_value에 정규표현식 이용
+        데이터프레임, 시리즈 적용
+    mask(조건), where(조건) 
+        where(조건) : 조건이  True인 요소만 출력, 그 외 요소는 결측치
+        mask(조건)  : 조건이 False인 요소만 출력, 그 외 요소는 결측치
+    dropna
+        결측치가 있는 데이터 누락(행, 열)
