@@ -1,0 +1,53 @@
+1장. 기본 태그
+title : 제목
+stlye : 서식 스타일, css를 이용해서 설정함
+body : 실제로 사용자에게 보여주는 부분
+a : 항상 href와 같이 쓰며 주소를 넣어 해당 주소로 이동 가능
+img : src 를 같이 사용하여 이미지를 넣을 수 있음
+script : javascript를 활용하여 동적출력을 할 수 있음
+p : 위 아래로 여백이 있는 줄 
+
+2장. 목록태그
+ol : 순서가 있는 목록태그 (ordered list)
+    type :  1(default), a, A i, i
+    사용방법 : <ol type="1"> 
+                <li>첫번째</li>
+                <li>두번째</li>
+                <li>세번째</li>
+               </ol> 
+ul : 순서가 없는 목록태그 (unordered list)
+    tpye : disc(default), circle, square
+    사용방법:<ul type="circle"> 
+                <li>한놈</li>
+                <li>두놈</li>
+                <li>세놈</li>
+               </ul> 
+
+3장. 표태그
+table : 표태그를 만듬
+tr : 요소들의 모임을 만듬
+th : 일반적인 요소를 추가함
+td : 글씨가 굵은 요소를 추가함
+    사용방법:<table>
+                <caption>table ex1</caption>
+                <tr>
+                    <th>국어</th>
+                    <th>영어</th>
+                    <th>수학</th>
+                </tr>
+                <tr>
+                    <td>100</td>
+                    <td>60</td>
+                    <td>80</td>
+                </tr>
+            </table>    
+
+colspan, rowspan : 하나의 요소가 2개 이상의 칸을 차지할 수 있음
+    사용방법:
+        <th colspan="2">국어</th>
+
+4장. 이미지태그
+<img src="파일주소" alt="이미지가 없다면 출력할 내용" width="가로" height="세로"/>
+위 처럼 사용하여 이미지 파일 불러올 수 있음
+<img src="이미지주소" />
+파일주소가 아닌 인터넷 이미지 주소로 불러올 수도 있음
