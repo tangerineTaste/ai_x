@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid gray;
+        }
+        #wrap > #header{ /* > : 자손선택자 */
+            overflow:hidden
+        }
+        #wrap .logo{ /* space : 후손선택자 */
+            float:left;
+            padding:10px 30px 10px 150px;
+        }
+        #wrap .title {
+            float: left;
+            padding: 20px 150px 10px 30px;
+        }
+        div p{ /* 후손 선택자(자손선택자 포함)*/
+            font-size:24px;
+        }
+        div > p{ /* 자손 선택자*/
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo"><h1>LOGO</h1></div>
+            <div class="title"><h2>00주식회사</h2></div>
+        </div>
+        <div id="content">
+            <p>
+                국민의 모든 자유와 권리는 국가안전보장·질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다. 재판의 전심절차로서 행정심판을 할 수 있다. 행정심판의 절차는 법률로 정하되, 사법절차가 준용되어야 한다. 대통령은 법률이 정하는 바에 의하여 훈장 기타의 영전을 수여한다. 법관은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니하며, 징계처분에 의하지 아니하고는 정직·감봉 기타 불리한 처분을 받지 아니한다. 국가는 대외무역을 육성하며, 이를 규제·조정할 수 있다. 모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를 가진다.
+            </p>
+            <ul>
+                <li><p>여기 content밑에 ul밑에 li 밑에 p</p></li>
+                <li><p>여기 content밑에 ul밑에 li 밑에 p</p></li>
+                <li><p>여기 content밑에 ul밑에 li 밑에 p</p></li>
+            </ul>
+        </div>
+        <div if="footer">
+            <p>주소</p>
+        </div>
+    </div>
+</body>
+</html>

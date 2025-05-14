@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{ /* 전체선택자 : 페이지 전체 태그.   페이지를 초기화 할 때 사용*/
+           margin: 0;  /* 밖여백 */ 
+           padding:0;  /* 안여백 */
+           color:saddlebrown;
+        }
+        header, nav, section, footer{
+            width:500px; /* 가로사이즈(width를 지정하지 않으면 block형태그는 부모 width를 따름*/
+            border:1px solid gray;
+            margin: 2px auto;
+        }
+        nav ul{ /* 수평으로 하고싶은 부모 */
+            overflow:hidden;
+        }
+        nav ul li{ /* 수평으로 만들어줄 태그 */
+            float:left;
+            list-style: none;
+            /*border: 1px solid red;
+            margin: 10px 25px;*/
+            width:125px;
+            text-align:center;  
+            margin: 10px 0;
+        }
+        section{ /* 수평 속성을 지우고 싶은 태그*/
+            clear: both; /* overflow: hidden 을 사용했다면 지워도 됨*/
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>oo 주식회사</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>회사 소개</li>
+            <li>서비스 소개</li>
+            <li>고객센터</li>
+            <li>공지사항</li>
+        </ul>
+    </nav>
+    <section>
+        <p>
+            각급 선거관리위원회의 조직·직무범위 기타 필요한 사항은 법률로 정한다.
+            국가는 균형있는 국민경제의 성장 및 안정과 적정한 소득의 분배를 유지하고,
+            시장의 지배와 경제력의 남용을 방지하며,
+            경제주체간의 조화를 통한 경제의 민주화를 위하여 경제에 관한 규제와 조정을 할 수 있다.
+        </p>
+    </section>
+    <footer>
+        <p>서울시 어디구 어디로 99 어디빌딩 101호</p>
+    </footer>
+</body>
+</html>
