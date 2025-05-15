@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{
+            width:600px; margin:0 auto;
+            border:1px solid gray;
+            text-align:justify;
+            padding:10px;
+        }
+        #wrap p > span{
+            display:block;
+            color:gray;
+            font-size:.5em;
+        }
+        #wrap p:nth-child(2n){background-color:lightblue;}
+        /* 
+            em(원본 글씨 크기의 몇배), %(글씨크기 및 width, height...), px, pt(3pt 가 4px)
+            pxtoem(https://pxtoem.com.au/)
+            pxtopt(https://pixelsconverter.com/px-to-pt)
+        */
+        #wrap p:nth-child(1){
+            font-size: .8em;
+        }
+        #wrap p:nth-child(2){
+            font-size:100%; /* 문자의 경우 원래 사이즈의 몇 % */
+            /* width, height, padding, margin... 등 길이의 경우 : 부모길이의 몇 % */
+        }
+        #wrap p:nth-child(3){
+            font-size:32px; /* 기본 사이즈가 16px */
+        }
+        #wrap p:nth-child(4){
+            font-size:9pt; /* 3pt==4px, 글씨 포인트 단위*/
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p>
+            대법원과 각급법원의 조직은 법률로 정한다. 대한민국은 국제평화의 유지에 노력하고 침략적 전쟁을 부인한다.
+            <span>2014.12.11 AM 09:12</span>
+        </p>
+        <p>
+            대법원과 각급법원의 조직은 법률로 정한다. 대한민국은 국제평화의 유지에 노력하고 침략적 전쟁을 부인한다.
+            <span>2014.12.11 AM 09:12</span>
+        </p>
+        <p>
+            대법원과 각급법원의 조직은 법률로 정한다. 대한민국은 국제평화의 유지에 노력하고 침략적 전쟁을 부인한다.
+            <span>2014.12.11 AM 09:12</span>
+        </p>
+        <p>
+            대법원과 각급법원의 조직은 법률로 정한다. 대한민국은 국제평화의 유지에 노력하고 침략적 전쟁을 부인한다.
+            <span>2014.12.11 AM 09:12</span>
+        </p>
+    </div>
+</body>
+</html>

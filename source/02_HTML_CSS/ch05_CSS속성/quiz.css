@@ -1,0 +1,75 @@
+﻿* {
+    margin: 10px;
+    padding: 0;
+}
+
+#wrap {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid black;
+    text-align: center;
+    height: 500px;
+    box-sizing: border-box;
+
+}
+
+#sulhyun {
+    opacity: 0.5;
+    width: 60px;
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    width: 600px;
+    height:500px;
+    background: url('ch05/sulhyun.jpg');
+}
+
+#header, #footer{
+    background-color:yellow;
+    border:1px solid black;
+    padding:10px;
+    height:8%;
+    line-height:30px;
+}
+
+#nav{
+    border:1px solid black;
+}
+
+#nav ul{
+    overflow:hidden;
+    margin:auto;
+}
+#nav ul li{
+    float: left;
+    list-style:none;
+    background-color:pink;
+    color:darkmagenta;
+    width:16%;
+    margin:1%;
+    padding:1%;
+}
+#nav ul li:first-child{
+    border-radius:15px 0 0 15px;
+}
+#nav ul li:last-child {
+    border-radius: 0 15px 15px 0;
+}
+#main {
+    overflow: hidden;
+    border: 1px solid black;
+    height:50%;
+}
+#main #content {
+    float: left;
+    width: 70%;
+    border: 1px solid black;
+    height:90%;
+}
+#banner {
+    float: left;
+    width: 20%;
+    border: 1px solid black;
+    height: 90%;
+}
