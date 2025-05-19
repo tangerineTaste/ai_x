@@ -1,0 +1,51 @@
+1장 CSS 단위들:
+    em, %, px, pt 등 다양한 단위를 사용해 글자 크기와 길이를 조절할 수 있다.
+    font-size: .8em, 100%, 32px, 9pt 
+
+2장 url 함수:
+    @font-face와 background 속성에서 url() 함수를 사용해 외부 파일을 불러올 수 있다.
+    src: url('파일경로'), background: url('이미지경로') 
+
+3장 display 속성:
+    block, inline, inline-block, none 등 display 속성으로 요소의 표시 방식을 조절할 수 있다.
+    display: block, inline, none 
+
+4장 visibility 속성:
+    visibility:hidden은 요소를 숨기지만 공간은 유지, display:none은 공간도 사라진다.
+    visibility:hidden, display:none 
+
+5장 margin, padding, border:
+    margin, padding, border 속성으로 요소의 여백과 테두리를 조절할 수 있다.
+    margin:10px, padding:10px, border:10px solid red 
+
+6장 box-sizing 속성:
+    box-sizing:border-box를 사용하면 border와 padding이 width, height에 포함되어 계산된다.
+    box-sizing: border-box 
+
+7장 line-height 속성:
+    line-height로 텍스트 줄 높이를 조절할 수 있다.
+    line-height: 300px 
+
+8장 글자 관련 속성:
+    font-family, font-style, text-decoration 등 글자 모양을 조절할 수 있다.
+    font-family: NanumG, font-style: italic, text-decoration: underline 
+
+9장 position 속성:
+    position:absolute, fixed 등 위치 속성으로 요소의 위치를 조절할 수 있다.
+    position: absolute, fixed 
+
+10장 position relative:
+    position:relative를 사용해 요소를 기준 위치에서 상대적으로 이동시킬 수 있다.
+    position: relative; top: 50px 
+
+11장 position absolute:
+    position:absolute를 사용해 요소를 절대 위치에 배치할 수 있다.
+    position: absolute; top: 0; left: 0 
+
+12장 float 속성:
+    float:left, right를 사용해 요소를 좌우로 띄울 수 있다.
+    float: left, right 
+
+13장 float 이미지 정렬:
+    float:left, right를 사용해 이미지와 텍스트를 좌우로 정렬할 수 있다.
+    img { float: left; margin-right: 10px; } 

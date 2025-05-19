@@ -1,0 +1,7 @@
+/* content(PC 용) */
+#wrap .content{
+    background-color: darkgreen;
+    color: white;
+    padding: 30px;
+    text-align: justify;
+}

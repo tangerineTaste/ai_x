@@ -58,6 +58,6 @@ preload : 파일을 어떤 방식으로 불러올 것인지 결정. default=auto
 controls : 재성,정지,음량조절 및 구간이동 등 컨트롤 할 수 있는 UI 제공
 
 6장. 
-forn태그
-div 태그
+form태그 : input 태그 안의 내용을 전송하기 위한 태그
+div 태그 : 공간 분할 태그로 사용함
 

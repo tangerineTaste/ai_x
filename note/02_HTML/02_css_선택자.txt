@@ -1,0 +1,60 @@
+1장 태그 선택자:
+    css에서 태그를 선택하여 스타일을 바꿀 수 있다.
+    h1{color:red;}
+
+2장 전체 선택자:
+    * 를 사용하여 모든 요소들의 값을 바꿀 수 있다.
+    보통 초기화 할 때 사용한다.
+    *{color:red;}
+
+3장 아이디, 클래스 선택자
+    아이디는 #, 클래스는 .을 사용하여 선택할 수 있다.
+    #id_name , .class_name{color:red;}
+
+4장 혼합선택자:
+    태그, 아이디, 클래스 선택자를 조합하여 특정 요소만 선택할 수 있다.
+    div#header, #wrap #content li.odd 
+
+5장 속성선택자:
+    태그의 속성값에 따라 선택할 수 있다.
+    input[type='password'], img[alt] 
+
+6장 속성선택자2:
+    속성값의 시작(^) 또는 끝($)에 따라 요소를 선택할 수 있다.
+    h4[title^='남자'], a[href$='docx'] 
+
+7장 후손/자손 선택자:
+    후손( )과 자손(>) 선택자를 사용해 특정 구조의 요소를 선택할 수 있다.
+    div p, div > p 
+
+8장 동위(형제) 선택자:
+    +는 바로 다음 형제, ~는 다음에 오는 모든 형제를 선택한다.
+    h3+div, h3~div 
+
+9장 반응(가상) 선택자:
+    :hover 등 가상 선택자를 사용해 마우스 등 반응에 따라 스타일을 바꿀 수 있다.
+    li:hover
+
+10장 테이블 반응 선택자:
+    tr:hover를 사용해 표의 행에 마우스를 올릴 때 스타일을 바꿀 수 있다.
+    tr:hover 
+
+11장 상태 선택자:
+    :focus, :enabled, :disabled, :read-only 등 요소의 상태에 따라 선택할 수 있다.
+    input:focus, input:disabled 
+
+12장 구조 선택자:
+    :nth-child, :first-child, :last-child 등 구조에 따라 요소를 선택할 수 있다.
+    li:nth-child(2n+1), li:first-child 
+
+13장 구조 선택자(가로):
+    float:left를 이용해 가로로 나열한 구조 선택자 예제.
+    li:nth-child(2n+1), li:first-child
+
+14장 문자 선택자:
+    :first-line, :first-letter 등 텍스트의 특정 부분을 선택해 스타일을 적용할 수 있다.
+    p:first-line, p:first-letter 
+
+15장 부정 선택자:
+    :not()을 사용해 특정 요소를 제외하고 선택할 수 있다.
+    li:not(#daum)
