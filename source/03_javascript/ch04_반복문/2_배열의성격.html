@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        // 자바스크립트에서의 배열의 크기가 가변적. 동일하지 않은 자료형 집합
+        var arr = [2,4,'홍길동',true,function(){alert(1)},[1,2]];
+        document.write('arr의 타입:' + typeof(arr) + ' / 값:' + arr + '<br>');
+        document.write('arr 인덱스의 갯수 : ' + arr.length+ '<br>');
+        for(i=0; i<arr.length; i++) document.write(i + ' : ' + arr[i] + '<br>');
+        arr.push(' 6번 인덱스의 값 추가'); // arr 배열 끝번 방에 데이터 추가 
+        document.write(arr+'<br>');
+        deleteValue =  arr.pop(); // arr배열의 마지막 인덱스 값을 return하고 배열에서 삭제
+        document.write('pop 1번 하면 <br>')
+        document.write(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

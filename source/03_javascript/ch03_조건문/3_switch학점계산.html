@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        let score = parseInt(prompt('점수입력'));
+        // if(score >100) grade = '잘못된 점수'
+        // else if(score>=90) grade = 'A';
+        // else if(score>=80) grade = 'B';
+        // else if(score>=70) grade = 'C';
+        // else if(score>=60) grade = 'D';
+        // else if(score>=0) grade = 'F';
+        // else grade = '유효하지 않은';
+        let temp = score==100? score-1 : score;
+        switch(Math.trunc(temp/10)){
+            case 9 : grade = 'A'; break;
+            case 8 : grade = 'B'; break;
+            case 7 : grade = 'C'; break;
+            case 6 : grade = 'D'; break;
+            case 5 : case 4 : case 3 : case 2 : case 1 : case 0:grade = 'F'; break;
+            default : grade='유효하지않음';
+            
+        }
+        document.write(grade);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

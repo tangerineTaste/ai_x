@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        do{
+            score = prompt('국어점수를 입력하시오');
+            kor_score = parseInt(score);
+        }while((kor_score< 0) || (kor_score>100) || isNaN(kor_score));
+        do{
+            score = prompt('영어점수를 입력하시오');
+            eng_score = parseInt(score);
+        }while((eng_score< 0) || (eng_score>100) || isNaN(eng_score));
+        document.write('<h2>국어점수 : ' + kor_score + '</h2>')
+        document.write('<h2>영어점수 : ' + eng_score + '</h2>')
+        document.write('<h2>평균:'+ (kor_score+eng_score)/2+'</h2>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

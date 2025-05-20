@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        table{
+            width: 300px;
+            margin: 0 auto;
+            border: 1px solid gray;
+            padding: 20px;
+        }
+        #text{
+            text-align: center;
+            display: none;
+        }
+        #text:last-child{
+            display: block;
+        }
+    </style>
+    <script>
+        function chk(){
+            first_num = parseInt(frm.first.value);
+            second_num = parseInt(frm.second.value);
+            if(!first_num || !second_num){
+                alert('유효하지 않은 입력입니다');
+                return false;
+            }
+            else{
+                result =  first_num>second_num?
+                    '첫번째 수가 ' + (first_num-second_num) + ' 큽니다' : '두번째 수가 ' + (second_num-first_num) + ' 큽니다';
+                
+                document.body.innerHTML += '<div id="text"><h2>' +result+'</h2></div>';
+                alert(result);
+                return false;
+            } 
+            frm.first.value = first_num;
+            frm.second.value = second_num;
+            
+        }
+    </script>
+</head>
+<body>
+    <form name="frm" onsubmit="return chk()">
+        <table>
+            <tr>
+                <td>첫번째수</td>
+                <td><input type="text" name="first" required="required"></td>
+            </tr>
+            <tr>
+                <td>두번째수</td>
+                <td><input type="text" name="second" required="required"></td>
+            </tr>
+            <th colspan="2"><input type="submit" value="결과"></th>
+        </table>
+        <div id="text"></div>
+    </form>
+</body>
+</html>

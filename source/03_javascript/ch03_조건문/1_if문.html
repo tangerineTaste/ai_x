@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <script>
+        const now = new Date().getHours();
+        if(now <= 6){
+            document.write('<h1>조용한 새벽입니다</h1>');
+            document.write('<img src=data:image/webp;base64,UklGRmgEAABXRUJQVlA4IFwEAACwIACdASq5AHcAPoEkoFAlKKUlFFEQEAllblD/bLvXmwJUCynwW+Tzp/EsSPP2rlmsNeGLgwFlNxSQ7IdZMVKo6eOoeT/v7+IY6ZcoiC9oXZeluCv6TX+OBJKdCAIpIuyvJEmKgDxusHXkYJMGZJzEDvPVsmPuqYD1aVWjTAt4DUYj9jo4V/wF0QwnZs9+T/9roY/fEYPGU5zQBUwTNnvATTvApaNq1CbUMh7jjih2aEfLBuiOCrXyLmQEl2TbXfscg5oXRHVODv0UvOhbrVRJ8CZEAMA1BO1ur7w/ENfKNvOQnrbK/j9WeN02MyV9VkL9mMe2hgQd/ns43jHVpn+wR+QIjPAuu4NGEhKCLgAA/rn5kP/oV5M+DX8//iHP0w/uU2KFwIopLDHHTxvn4mivMZEbtCC9DC86cgxJmxIgLteBgM3f3UqnvYxC7U+JB5Sp4gC8CAuqib5CuCAnsfo9Ag8GZJh4dOCiXG8I265ZpR+Drsnp9fczqUI63Ut3lVBwbV6210uVqeWpdy4CLPFhKLUfPW18WbA9PrNJfopg0X3Ym9lidadZdUEwtlXJxfpXCEBw/IO5sSuQmJirV3UyG1O4j7UzaUkgc4KvTstD8TDyNQT6dmpNTOQ2TNGhQktgvBzjHcuzadQ72sp4kCeMLeycAAr9/ujQ8TB3+a2ter2Nc1ID+8yOQjysSnj8KxoR7jmMe022/nlhDMwqLe5m6God2qp9Wr+4s6bTW8iexVMf65xvuqClQJj9jUOvVrSwnUjUOIXw3YNLO/MSH0iOM+vMwojAE3ibiy3TtVnau4Nm9TooZI5pUKYayrnVQ6sRLPIBv6qv8f2oX0OQ16vcKb7vvmfRPfBpkT5xBQj0GC2f1u6kMcNAZzLBMTXA4CQxI+s9HxFDDCihsRRSmjXYSJUVIHKVhTjXyytj/GoakWHiCKX7112KCm5+0BIQDZEy75LGr4/7oIZMHd6zQf/SS8Lso8NHA+OzPgSW9aDHG74JEb6NdfvBUc8NjbVLmXllUPFl+4mMoe4dbh18Xn4se2au6vWUopaUolXZnIjTmq18XAlFx/sa6GYBnoZINHLUGSszhg9H/33t153NVu9+WPHzkrh668MB8gTrYFkuOzpo0IlSeSWot3q56AbIKt908cfrn7HRFLdYkySGp8Ilkof/IkvyTD8/05sjCk5mOXOza5iKMp2fX1K5XIuD0b+G6g9lU6hpSUPN4baSqBFb9l9WXCe+XTmTeYQ8wA1kIOgrYFHofwxxytR4ax+3aUtdJiiZUEmriQkZNzMw6yuKBMM+HxmMSsB1rzLNcWtDTXPuaf+ED2TVh+XkUWFrhekyb4hK+eZCfFR71OOuv4h+AbCpTIdpe5coj06lclEkCZYCwwsb6YrEeTPhaUMm+LXEliLtSvDkdIyVHyyfES1JPotURfm4JXXd2YFDlFTwsP0Gdy8UcoJq9I3ONSnU/YvHkVSRt63OMYIAAAA= />' );
+        }
+        else if(now <17){
+            document.write('<h1>신나는 낮입니다</h1>');
+            document.write('<img src=data:image/webp;base64,UklGRgoEAABXRUJQVlA4IP4DAAAwHQCdASq5AHcAPoEmoFAlLyUlE4HgEAlnBwSIyPTSBTkNgA4QDaX35cEs7fsC0kKjqhsr3ZVqq3ONh94tWPgoMZO9aZX5ONkdPQwNLZF7aqk3RtwMNADYZekdGMX/d1PZIRIPnT/61U0jBrgUq88MmlAa/dQW6rxjJpI73a/jToLPmrPfEKyMn9q39z44MNoxruHzx3Z1l0APfFj0XmZ7KdVR8zMUuaZEju81v/ELnatLZjsALVd/CYFIEyC6patxL8BVxyeuOqEriylLemwUcSthjIa1zxN0fNE4wZKDBaa9mQ5FWLlpqtFGDgn/yuUHAAD+8Pzr7wP/jeP6Vv5Lta/90PKruGjoafgvmt2o2geT+YSz1XF9dARIOe/EIWQXk6h3lfGagC2xvqJky4gtBeFVgs+CQpPj5SN9ctZQo+MiSwbbVdOBE/S6/zPumVBGClLtm6uzPTo+s8QdonQnOKusOUGY+JofSyYPhRh2rOpSIycJas+M05yOKEYksjMLwY4DSP4SnbaK40sEKDejaIT0Cfed4F5LRXZCfkyyyg3f9ahjvwPNzGfvT1B3LHlCWwvRq1pN4Xu3tXoT6XQIpWnQSIvSuoJ397FlEqOaumG8s+hkvFPK05qBuD/t97cvLUlKfR/dMYt9Vj+n50/x3JL81r+VYSmdH9j3yX6BVxrciOjL8r0YVtUZmGpApHiPc1gRUSnIIhgW731pE/mdIhJ8lRF55aa6xQuXfKN95yJ/Hc8qC2j7vx2atD1yq0XhAjVlPnsNAORboZURS+miy3ApnGGcQ/3FMVeZpXMaUZazyIJf25qiJmONqyT3w7luL0EjeOv0lgbISTE9fGRRmIoRK8e4AvM0mmV0voERPAJ146v5TQUgHzz9Q0g6HpWS/1WB5iWk/JO39Sg7oO1+QZ99PxyBTZIVpXwG7K1XlLBevSFvW2kHGAgcTXxljNHFq5m9GGbjR0oDP89uxI5wVzD5E4IPsPYv4cEsb2wtvmc8WB9qqBpl10akwpFI8YpgpxyDFhSyW1WjCoUGYoe+tPbEUAIFtcY4UOczRI1UiKrCJm3WMoVmqPXGV+T+7Pb9ivlJLTgQT6Fa+pKI0t7ackNAyH/O9YFVnxs9kvMV7z7PanrSthWFPsBgw1xJ233r2hE0WZuUtWW6aB/YFLvDDJ1bqgAGLZE+ucnE84lQXMTbfLwIJyy2T4aK9F00iAIe+GHUBT92n2PoHTLkXpmmCduYVz6a5G+A4sGYICyXOHddDT8m9zMZv976jim/QjFigDazIjJUk2QLu8BiDsT3Q6TNAn4te2yJk291i84Egz1gIpLy8LsK8tXwzuTWUACPrGLx1yxbKByq+KiEAA== />' );
+        }
+        else{
+            document.write('<h1>휴식이 필요한 밤입니다</h1>');
+            document.write("<img src=https://namu.wiki/w/%EB%B0%A4#:~:text=%EC%98%88%EB%A5%BC%20%EB%93%A4%EC%96%B4%20%EC%98%A4%EC%A0%84%201%EC%8B%9C%EB%82%98%202%EC%8B%9C%EB%A5%BC%20%EC%82%AC%EB%9E%8C%EB%93%A4%EC%9D%80%20'%ED%95%9C%EB%B0%A4%EC%A4%91'%EC%9D%B4%EB%9D%BC%EA%B3%A0,%EB%95%8C%EB%8A%94%20%EC%83%88%EB%B2%BD%201%EC%8B%9C%2C%20%EC%83%88%EB%B2%BD%202%EC%8B%9C%EB%9D%BC%EA%B3%A0%20%ED%95%98%EB%8A%94%20%EC%8B%9D. />" );
+         }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        let scoreStr = prompt('점수를 입력하세요','기본값'); //취소:null, 확인:입력된 값
+        // document.writeln('scoreStr ' + scoreStr + '-타입:' + typeof(scoreStr));
+        if( scoreStr != null){
+            // string을 number로 형변환1. Number() : 형변환 불가일 경우 NaN. '' or ' ' 라면 0
+            let score = Number(scoreStr) 
+            // string을 number로 형변환2. parseInt() : 형변환불가일 경우 NaN. '' or ' ' 라면 NaN, 10점 -> 10
+            score = parseInt(scoreStr);
+            // document.writeln('score=' + score + '-타입:' + typeof(score));
+            if(isNaN(score)) document.writeln('점수를 입력해');
+            else result = score>=90? '참 잘했어요':'분발하세요';
+            document.writeln(result);
+        }else{
+            alert('점수를 입력해')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
