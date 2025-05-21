@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        loop = true;
+        success = 0;
+        fail = 0;
+        total = 0;
+        while(confirm('누적할건가?')){
+            // 누적 숫자 받기
+            num = prompt('누적할 숫자를 입력');
+            // 받은 숫자 빈문자열인지 확인
+            if(!num || !num.trim() || isNaN(Number(num)) || Number(num)>100 || Number(num)<0 ){
+                fail++;
+            }
+            else{
+                success++;
+                total += Number(num);
+            }
+        }
+        document.write('<p>' + (fail+success) + '번 입력</p>');
+        document.write('<p>누적점수 : ' + total + '</p>');
+        document.write('<p>점수를 제대로 입력한 횟수 : ' + success + '</p>');
+        document.write('<p>점수를 잘못 입력한 횟수 : ' + fail + '</p>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

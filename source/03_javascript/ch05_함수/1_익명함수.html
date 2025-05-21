@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        // 익명함수는 정의 전에 사용 불가
+        let functionVar = function(i,j) {
+            document.writeln(i +j+ '<br>');
+        };
+        functionVar(10,20);
+        functionVar = function(i,j){// 재정의 후 실행하면 재정의 된 함수가 실행된다.
+            document.write('수정된 함수 : ' + i*j);
+        };
+        functionVar(10,20);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

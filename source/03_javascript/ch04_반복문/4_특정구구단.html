@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        td{
+            text-align: right;
+        }
+        table{
+            margin: 0 auto;
+        }
+        tr{
+            border: 1px solid gray;
+        }
+    </style>
+    <script>
+        // prompt 함수를 이용해서 원하는 구구단을 입력받아 해당 구구단을 출력
+        do{
+            num = parseInt(prompt('2~9 사이의 정수를 입력하시오'));
+        }while(isNaN(num) || num>9 || num<2);
+        document.write('<table>');
+        for(i=1; i<10; i++){
+            document.write('<tr><td>'+num + ' × ' + i + ' = </td><td> ' + num*i + '</td></tr>');
+        }
+        document.write('</table>')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

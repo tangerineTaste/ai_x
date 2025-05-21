@@ -1,0 +1,23 @@
+1장 변수 선언
+    var, let, const 키워드 사용
+    var x = 10; let y = 20; const z = 30;
+
+2장 자료형
+    숫자, 문자열, 불리언, null, undefined, 객체, 배열 등
+    let str = "안녕"; let num = 100;
+
+3장 복합 대입 연산자
+    +=, -=, *=, /=, %= 등
+        x += 5; // x = x + 5
+
+4장 확인 alert, confirm, prompt
+    alert("메시지");
+    confirm("확인 메시지?") → true/false 반환
+    prompt("입력 메시지") → 사용자 입력값 반환
+
+5장 False 값들
+    false, 0, "", null, undefined, NaN
+
+6장 숫자로 표현 안 되는 숫자
+    Infinity, -Infinity, NaN
+
