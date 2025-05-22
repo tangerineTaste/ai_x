@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        body{
+            background-image: url(ch05_img/img01.png) ;
+            background-size: 100%;
+        }
+    </style>
+    <script>
+        arr = ['ch05_img/img01.png','ch05_img/img02.png','ch05_img/img03.png']
+        time = -1000;
+        document.write('테스트');
+        var id = setInterval(() => {
+            time += 1000;
+            document.write('<div id="um">'+time + '</div><br>');
+            document.body.style.backgroundImage = 'url('+arr[0]+')';
+        }, 1000);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

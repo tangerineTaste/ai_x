@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        let person = {
+            name : '이순신', //속성 변수
+            age:20, 
+            eat:function(food){// 메소드 내에서는 this 키워드 이용
+                var msg = this.age + '살' + this.name + '님은' + food + '를 먹는다';
+                alert(msg);
+            },
+            toString : function(){ // 파이썬의 __str__역할
+                let output = ''; //
+                for(let key in this){
+                    if(key != 'eat' && key != 'toString'){
+                        output += key + ' : ' + this[key] + '<br>';
+                    }
+                }
+                return output;
+            },
+                
+        };
+        document.write(person);
+        person.address = '서울시'
+        document.write('<h2>서울시 추가 후 </h2><br>');
+        document.write(person);
+        person.hobby = '열공'
+        document.write('<h2>열공 추가 후 </h2><br>');
+        document.write(person);
+        alert(person.toString().replaceAll('<br>','\n')); //alert를 사용 할 경우 <br>은 \n 으로 바꿔준다.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

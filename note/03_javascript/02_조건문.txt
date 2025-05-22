@@ -1,0 +1,21 @@
+1장 if문
+    if, else if, else 구문 사용
+    예:
+        if(now <= 6){
+            // 새벽 메시지 출력
+        } else if(now < 17){
+            // 낮 메시지 출력
+        } else {
+            // 밤 메시지 출력
+        }
+
+2장 switch문
+    switch 구문 사용, switch(수식사용가능)
+- 예:
+    var su = parseInt(prompt('숫자를입력'));
+    switch(su % 2){
+        case 0: document.write('짝수'); break;
+        case 1: document.write('홀수'); break;
+        default: document.write('숫자가 아님'); break;
+    }
+

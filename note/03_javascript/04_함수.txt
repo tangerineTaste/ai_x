@@ -1,0 +1,79 @@
+1장 익명함수
+- 익명함수는 정의 전에 사용 불가
+- 변수에 함수 할당 후 호출 가능
+- 함수 재정의 가능
+
+2장 익명함수와 화살표 함수
+- 매개변수 유무에 따른 일반 함수와 화살표 함수 비교
+
+3장 선언적 함수
+- 선언적 함수는 정의 전에 호출 가능
+- 함수 재정의 시 마지막 정의가 유효
+
+4장 디폴트 값을 갖는 매개변수
+- 매개변수 기본값 설정 가능
+
+5장 매개변수와 리턴값
+- 매개변수 개수와 관계없이 함수 호출 가능
+- arguments 객체 사용 가능
+
+6장 가변인자 함수
+- 매개변수 개수가 가변적인 함수
+- Array 생성자 함수 예제
+- 예:
+  var arr1 = [1, 2, '삼'];
+  var arr2 = Array(1,2,'삼');
+  var arr3 = [, ,];
+  var arr4 = Array(2);
+  var arr5 = [];
+  var arr6 = Array();
+
+9장 내부 함수
+- 함수 내에 정의된 내부 함수 사용 
+- 예:
+  function pythagoras(width, height){
+    function square(x){
+      return x*x;
+    }
+    return Math.sqrt(square(width) + square(height));
+  }
+  alert('빗변의 길이는 ' + pythagoras(3,4));
+
+10장 콜백 함수
+- 매개변수로 함수 전달하여 반복 호출
+- 예:
+  function callTenTimes(callback){
+    for(let i=0; i<10; i++){
+      callback();
+    }
+  }
+  let fun = () => document.write(new Date() + '<br>');
+  callTenTimes(fun);
+
+11장 클로저 함수
+- 함수가 함수를 반환하는 클로저 
+- 예:
+  function test(name){
+    var msg = "Hello " + name + "님 Hi!";
+    return () => alert(msg);
+  }
+  test('콩길동');
+
+12장 setTimeout 함수
+- 일정 시간 후 함수 실행 및 타이머 중지 
+- 예:
+  let id = setTimeout(() => {
+    alert('3초 만료');
+  }, 3000);
+  clearTimeout(id);
+
+13장 setInterval 함수
+- 일정 간격으로 함수 반복 실행 및 중지 
+- 예:
+  var id = setInterval(() => {
+    document.write(new Date() + '<br>');
+  }, 1000);
+  setTimeout(() => {
+    clearInterval(id);
+    document.writeln('타이머 끝');
+  }, 10000);
