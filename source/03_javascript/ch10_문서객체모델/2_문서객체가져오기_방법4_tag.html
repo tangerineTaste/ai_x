@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        let head;
+        window.onload = ()=>{
+            head = document.getElementsByTagName('h1'); //배열
+            // 일반 for문
+            // for(let idx=0; idx<head.length; idx++)head[idx].innerHTML = '바꿔 #' + idx;
+            // for-of 문
+            // for(element of head) element.innerHTML = '바꿔 #';
+            //for-in 문
+            for(idx in head) head[idx].innerHTML = '바꿔 ##';
+            // forEach문 은 불가능 
+        }
+    </script>
+</head>
+<body>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+</body>
+</html>

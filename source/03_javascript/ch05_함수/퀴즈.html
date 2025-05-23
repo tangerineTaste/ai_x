@@ -6,19 +6,25 @@
     <title></title>
     <style>
         body{
-            background-image: url(ch05_img/img01.png) ;
+            background: url(ch05_img/img01.png) ;
             background-size: 100%;
         }
     </style>
     <script>
         arr = ['ch05_img/img01.png','ch05_img/img02.png','ch05_img/img03.png']
-        time = -1000;
-        document.write('테스트');
+        color = ['yellow','green','white'];
+        time = 1;
+        document.write(new Date().toLocaleString());
         var id = setInterval(() => {
-            time += 1000;
-            document.write('<div id="um">'+time + '</div><br>');
-            document.body.style.backgroundImage = 'url('+arr[0]+')';
+            document.body.innerHTML = new Date().toLocaleString();
+            document.body.innerHTML += (' <h2>'+time + '초 지남</h2>');
+            document.body.style.background = 'url('+arr[time%arr.length]+')';
+            document.body.style.backgroundSize = '100%';
+            document.body.style.color = color[time%color.length];
+            time++;
+            if(time == 11)clearTimeout(id);
         }, 1000);
+
         
     </script>
 </head>

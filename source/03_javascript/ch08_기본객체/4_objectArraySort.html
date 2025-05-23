@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        function Student(name, kor, mat){
+            this.name = name;
+            this.kor = kor;
+            this.mat = mat;
+            this.getSum = function() {return this.kor + this.mat;};
+            this.toString = function(){
+                    let output = '';
+                    for(let key in this){
+                        if(key!= 'toString' && key != 'getSum'){
+                            output += key + ':' + this[key] + ' ';
+                        }else if(key == 'getSum'){
+                            output += key.substring(3) + ':' + this[key]() + '\n';
+                    }}
+                return output;
+                };
+            
+        }
+
+        var students = [new Student('홍길동',99,90),
+                    new Student('마길동',20,30),
+                    new Student('신길동',99,10),
+                    new Student('김길동',50,80)];
+        document.writeln('<h3>정렬전</h3>');
+        students.forEach(data => document.writeln(data + '<br>'));
+        students.sort(); // 문자로 변환 후 ASCII 코드 정렬
+        document.writeln(students);
+        students.forEach(data => document.writeln(data + '<br>'));
+        students.sort((left, right)=>{
+            return right.getSum() - left.getSum(); //총점 기준 내림차순 정렬
+        });
+        document.writeln('<h3>정렬후(총점 내림차순 정렬)</h3>');
+        students.forEach(data => document.writeln(data + '<br>'));
+        // 수학점수 기준 오름차순 정렬
+        students.sort((left, right)=>{
+            return left.getSum() - right.getSum(); //총점 기준 오름차순 정렬
+        });
+        document.writeln('<h3>정렬후(총점 오름차순 정렬)</h3>');
+        students.forEach(data => document.writeln(data + '<br>'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

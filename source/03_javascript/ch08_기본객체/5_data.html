@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script src="dateInterval.js"></script>
+    <script>
+        var now = new Date();
+        document.writeln(now + '<br>');
+        document.writeln(now.toLocaleString() + '<br>');
+        document.writeln(now.toLocaleDateString() + '<br>');
+        document.writeln(now.toLocaleTimeString() + '<br>');
+        var openday = new Date(2025,3,7,9,30,0); // 월은 0월부터 시작
+        document.writeln('개강일 : '+openday.toLocaleString()+ '<br>');
+        
+        day = now.getIntervalDay(openday);
+        document.writeln(day + '일 지났다');
+
+        function getIntervalDay(date){
+            
+            return a;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

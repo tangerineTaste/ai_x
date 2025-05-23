@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        h2{
+            width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        table{
+            margin: 0 auto;
+        }
+        td{
+            width: 70px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        var color = ['red','orange','yellow','green','blue','darkblue','violet','white'];
+        window.onload = () =>{
+            var td = document.getElementsByTagName('td');
+            for(data=0; data<td.length; data++){
+                td[data].style.backgroundColor = color[data];
+            }
+        }
+        changeColor = function(n){
+            document.body.style.backgroundColor =  color[n];
+        };
+        outColor = function(){
+            document.body.style.backgroundColor =  'white';
+        };
+    </script>
+</head>
+<body>
+    <h2>마우스를 올리면 바탕화면 색 변경</h2>
+    <table>
+        <tr onmouseout="outColor(7)">
+            <td onmouseover="changeColor(0)"></td>
+            <td onmouseover="changeColor(1)"></td>
+            <td onmouseover="changeColor(2)"></td>
+            <td onmouseover="changeColor(3)"></td>
+            <td onmouseover="changeColor(4)"></td>
+            <td onmouseover="changeColor(5)"></td>
+            <td onmouseover="changeColor(6)"></td>
+        </tr>
+    </table>
+</body>
+</html>
