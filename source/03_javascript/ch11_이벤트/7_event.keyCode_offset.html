@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        img{
+            display: none;
+            position: absolute;
+        }
+    </style>
+    <script>
+        var span;
+        window.onload = () =>{
+            span = document.querySelector('span');
+            
+        }
+        window.onkeyup = () =>{
+            span.innerHTML = event.keyCode;
+            let key = event.keyCode;
+            if(96<=key && key <=105){
+                span.innerHTML = '우측숫자 키보드 ' + (key-96) + '을 입력';
+            }else if(48<=key && key <=57) span.innerHTML = '위숫자 키보드 ' + (key-48) + '을 입력';
+            else if(65<=key && key <=90) span.innerHTML = '알파벳  ' + String.fromCodePoint(key) + '을 입력';
+        }
+        window.onclick = () =>{
+            span.innerHTML = event.offsetX + ',' + event.offsetY+'<br>';
+            span.innerHTML += '스크린좌표 : ' + event.screenX + ',' + event.screenY;
+            img = document.getElementsByTagName('img')[0];
+            img.style.display = 'block';
+            img.style.left = event.offsetX + 'px';
+            img.style.top = event.offsetY + 'px';
+            
+        }
+    </script>
+</head>
+<body>
+    <span>
+        
+    </span>
+    <img src="img/car.gif">
+</body>
+</html>

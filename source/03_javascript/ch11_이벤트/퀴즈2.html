@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        ul{overflow: hidden;}
+        li{float: left; list-style: none; margin: 3px;}
+        
+
+    </style>
+    <script>
+        over = ['0over.jpg','1over.jpg','2over.jpg','3over.jpg'];
+        out = ['0out.jpg','1out.jpg','2out.jpg','3out.jpg'];
+        window.onload= () =>{
+            var img = document.getElementsByTagName('img');
+            for(let i=0; i<img.length; i++){
+                img[i].onmouseover = function(){
+                    this.setAttribute('src','img/'+over[i]);
+                }
+            }
+            for(let i=0; i<img.length; i++){
+                img[i].onmouseout = function(){
+                    this.setAttribute('src','img/'+out[i]);
+                }
+            }
+        }
+        
+            
+    </script>
+</head>
+<body>
+    <li><a href="#"><img src="img/0out.jpg" /></a></li>
+    <li><a href="#"><img src="img/1out.jpg" /></a></li>
+    <li><a href="#"><img src="img/2out.jpg" /></a></li>
+    <li><a href="#"><img src="img/3out.jpg" /></a></li>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        table{width:500px; margin: 10px auto; background-color: darkgreen;}
+        td{background-color: white; padding: 50px; text-align: center;}
+
+    </style>
+    <script>
+        var td;
+        window.onload = () =>{
+            td = document.getElementsByTagName('td');
+        }
+        window.onkeyup = () =>{
+            for(i=0; i<9; i++) td[i].style.backgroundColor = 'white';
+            let key = event.keyCode;
+            for(i=0; i<9; i++){
+                if(Number(td[i].innerHTML) == (key-48)){
+                    td[i].style.backgroundColor = 'yellow';
+                }else if(Number(td[i].innerHTML) == (key-96)){
+                    td[i].style.backgroundColor = 'red';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <table>
+    <tr><td>0</td><td>1</td><td>2</td></tr>
+    <tr><td>3</td><td>4</td><td>5</td></tr>
+    <tr><td>6</td><td>7</td><td>8</td></tr>
+
+</body>
+</html>

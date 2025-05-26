@@ -1,0 +1,21 @@
+1장 인라인 이벤트 모델
+    body에서 태그에 직접 함수명을 입력하여 이벤트 할당
+    <h1 onclick="whenClick()">click</h1>
+
+2장 기본 이벤트 모델
+    기본적으로 내장되어 있는 이벤트 함수에 대입하여 할당
+    header.onclick = whenClick;  # onclick이 기본 이벤트
+
+3장 표준이벤트모델
+    객체.addEventListener(이벤트이름, 리스너함수) 로 이벤트 할당
+
+4장 강제 이벤트 발생
+    다른 이벤트 실행 시 객체의 이벤트를 불러와 사용 가능
+
+5장 이벤트 제거
+    기본 이벤트 모델 : 객체.이벤트 = null; 
+    표준 이벤트 모델 : 객체.removeEventListener('이벤트',이벤트가 할당된 변수)
+
+6장 이벤트 제한
+    기본 이벤트 모델 : return false 로 이벤트를 제한
+    표준 이벤트 모델 : 이벤트 객체 e 를 인자로 받고 e.perventDefault() 로 기본 이벤트 제한

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        window.onload = ()=>{
+            div = document.getElementsByTagName('div')[0];
+            div = document.querySelector('div.content');
+        };
+        const append = () => {
+            //document.body.innerHTML += '<h1>HEADER</h1>';
+            let h1 = document.createElement('h1');
+            let textNode = document.createTextNode('HEADER');
+            h1.appendChild(textNode);
+            div.appendChild(h1);
+            var header = document.getElementsByTagName('h1');
+            // header = document.querySelectorAll('h1');
+            for(idx=0; idx<header.length; idx++){
+                header[idx].innerHTML += '<span>#</span>';
+            }
+        }
+        const remove = function(){
+            h1 = document.getElementsByTagName('h1');
+            if(h1.length>0){
+                div.removeChild(h1[0]);
+            }
+        }
+        function removeAll(){ 
+            h1 = document.getElementsByTagName('h1');
+            number = h1.length;
+            if(number>0){
+                for(i =0; i<number; i++)
+                div.removeChild(h1[0]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="'wrap" class="content">
+        <button onclick="append()">HEADER생성</button>
+        <button onclick="remove()">HEADER 없애기</button>
+        <button onclick="removeAll()">HEADER 모두 없애기</button>
+        <h1>HEADER</h1>
+        <h1>HEADER</h1>
+    </div>
+</body>
+</html>
