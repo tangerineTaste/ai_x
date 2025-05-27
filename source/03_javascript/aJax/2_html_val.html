@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+<script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script>
+        $(document).ready(function(){
+            $('p#msg').html('<h1>Hello</h1>');
+            $('input[name="msg"]').val('Hello');
+            $('input[name="msg"]').css('font-weight','bold');
+            $('button').click(function(){
+                let msg = $('input[name=msg]').val();
+                $('p#msg').text(msg);
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <p id="msg"></p>
+    <p>메세지 : <input type="text" name="msg" class="msg"></p>
+    <button>msg 경고창</button>
+</body>
+</html>

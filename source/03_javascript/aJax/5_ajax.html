@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+<script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script>
+        $(document).ready(function(){
+            /* ajax 양식 필수요소:★
+            $.ajax({url:'요청경로(xx?id=aa / aa)' ★,
+                    type : 'get'이나 'post',
+                    data : 요청파라미터와 값 'id=aaa'이나 {id:'aaa'},
+                    dataType : 'html'/'json' 요청한 경로로 실행한 결과의 타입,
+                    success : 요청 경로 성공 시 수행할 콜백함수 ★,
+                    error : 요청 경로 실패 시 수행할 콜백함수
+            }); */
+
+            $('button').click(()=>{
+                let id = $('input[name=id]').val();
+                $.ajax({
+                    url : 'exists.html',
+                    type : 'get', //default : get
+                    data : {id:id},
+                    dataType : 'html', //default : html
+                    success : function(data){$('span').html(data);},
+                    error : function(code){alert(code.status + '/' + code.statusText);}
+                });
+            });
+            $('input[name=id]').keyup(function(){
+                let id = $(this).val();
+                $.ajax({
+                    url : 'nonExists.html',
+                    data : {id:id},
+                    success : data=>{ $('span').html(data);},
+                    error : code =>{alert(code.status + '/' + code.statusText);}
+                });
+            })
+        }); 
+    </script>
+</head>
+<body>
+    아이디 <input type="text" name="id" autocomplete="off"><button>중복체크</button><br>
+    <span id="idConfirm"></span>
+</body>
+</html>
