@@ -1,0 +1,16 @@
+정적 웹크롤링 (~/robots.txt)
+soup 가져오기 : 
+    방법 1 : request 모듈 이용
+    headers = {'user-agent':'user-agent 내용(브라우저에서 복사)'}
+    response = request.get(url, headers = headers)
+    soup = BeautifulSoup(response, 'html.parser')
+
+    방법 2 : urllib.request 모듈 이용
+    url = urllib.parse.quote('한글부분')
+    response = urllib.request.urlopen(url, headers=headers)
+    soup = BeautifulSoup(response, 'html.parser')
+
+select 혹은 find 를 사용하여 요소 가져오기 : 
+    soup.select('선택자')나 soup.select_one('선택자')나
+    soup.find('태그', 속성(dict, class_))혹은
+    soup.find_all('태그들 list', 속성)
