@@ -14,3 +14,14 @@ select 혹은 find 를 사용하여 요소 가져오기 :
     soup.select('선택자')나 soup.select_one('선택자')나
     soup.find('태그', 속성(dict, class_))혹은
     soup.find_all('태그들 list', 속성)
+
+동적 웹크롤링
+selenium으로 크롤링 : 
+    from selenium import webdriver
+    driver = webdriver.Chrome()
+    driver.get("http://www.python.org")
+    element = driver.find_element(By.NAME, id) # CSS_SELECTOR, NAME, LINK_TEXT 등 사용할 수 있다
+                    .find_elements             # find_elements 로 사용하면 배열형으로 가져온다.
+
+
+
