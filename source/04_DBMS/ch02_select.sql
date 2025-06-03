@@ -226,7 +226,7 @@ SELECT ENAME, SAL
 --출력하는 SELECT 문을 작성
 SELECT ENAME, SAL, COMM
     FROM EMP
-        WHERE COMM > SAL*0.1;
+        WHERE COMM > SAL*1.1;
 --10.	job이 CLERK이거나 ANALYST이고 sal이 1000,3000,5000이 아닌 모든 사원의 정보를 출력
 SELECT *
     FROM EMP
