@@ -1,0 +1,16 @@
+RNN을 사용하여 문맥이 있는 자연어 학습시키기
+
+1. RNN이란?
+    RNN은 Recurrent Neural Networ의 약자로 '순환 신경망'이라는 의미이다.
+    기존 DNN 학습에서는 학습이 한 방향으로만 이루어 졌다.
+    하지만 RNN은 같은 은닉층에 있는 셀들의 출력이 다른 셀의 입력으로 사용된다.
+
+2. 학습과정
+    1) 문장의 각 단어들을 숫자들로 인코딩 (문자열 리스트를 인덱스 시퀀스로 변환. t.texts_to_sequences)
+    2) 학습을 시키기 위해 문장을 길이가 다르게 여러개의 문장으로 자르기 (['경마장에 있는','경마장에 있는 말이', ...]형태의 리스트 생성)
+    3) 훈련이 가능하도록 각 문장의 시퀀스의 길이를 똑같이 맞춰줌. 앞 혹은 뒤에 0으로 채워 가장 긴 시퀀스를 기준으로 맞춰줌 pad_sequences(sequences, maxlen, padding)
+    4) y의 원핫인코딩을 해준다.
+    5) 모델생성을 한다. 
+        model.add(Embedding(input_dim=input_dim, output_dim=10, input_length=X.shape[1])) 
+        model.add(SimpleRNN(32)) 이후는 DNN가 같다
+    6) 모델 테스트를 할 때도 똑같이 입력값을 시퀀스로 만들어 준다.
