@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{{ url_for('static', filename='file.css' ) }}"
+          rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>{{name}}님 연습화면</h1>
+    <table>
+        <thead>
+            <tr><th>이름</th><th>나이</th></tr>
+        </thead>
+        <tbody>
+            <tr><th>{{name}}</th><th>{{age+1}}</th></tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
