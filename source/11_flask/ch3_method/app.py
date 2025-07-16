@@ -27,5 +27,7 @@ def join():
 def update(name, id, pw, addr):
     return f"{name}님의 정보를 수정하였습니다." 
 
-if __name__ == '__main__':
-    app.run()
+@app.route("/delete/<id>", methods=["DELETE"])
+def delete(id):
+    # delete from 테이블명 where id=id를 DBMS에 전송하기
+    return f"{id}번째 사용자를 삭제하였습니다."
