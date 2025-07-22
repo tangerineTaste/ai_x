@@ -5,6 +5,7 @@
 
 show databases; -- database들 리스트
 use world;
+use mysql;
 show tables;
 select * from city;
 
