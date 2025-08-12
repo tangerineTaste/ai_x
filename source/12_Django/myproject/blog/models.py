@@ -37,3 +37,16 @@ class Post(models.Model): # 테이블명 : blog_post
                                          self.update_at)
   class Meta:
      ordering = ['update_at'] # 정렬 옵션
+  
+class Comment(models.Model):
+  post = models.ForeignKey(Post,on_delete=models.CASCADE) # post내용을 delete 할 경우 자동 삭제
+  author = models.CharField(verbose_name="이름", null=True, blank=True, max_length=20)
+  message = models.TextField(verbose_name="댓글")
+  create_at = models.DateField(auto_now_add=True)
+  update_at = models.DateTimeField(auto_now=True)
+   
+  def __str__(self):
+    return "{}글의 댓글 -{} (by {})".format(self.post.pk, self.message, self.author)
+  
+  class Meta:
+    ordering = ['-create_at', '-update_at']

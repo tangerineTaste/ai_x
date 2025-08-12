@@ -1,9 +1,11 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.shortcuts import redirect
 from blog import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.index ),
-    path("list/", views.list)
+    path("", lambda request: redirect("blog:index")),
+    path("blog/", include("blog.urls")),
+
 ]
