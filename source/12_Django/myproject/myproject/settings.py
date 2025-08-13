@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django_extensions", # 추가 앱 등록
     "blog",
+    "accounts",
 ]
 
 MIDDLEWARE = [
