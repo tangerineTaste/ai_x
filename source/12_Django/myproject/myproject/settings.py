@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     "django_extensions", # 추가 앱 등록
     "blog",
     "accounts",
+    "book",
+    "django.contrib.humanize" # intconmma(세자리마다 ,) 필터 사용
 ]
 
 MIDDLEWARE = [

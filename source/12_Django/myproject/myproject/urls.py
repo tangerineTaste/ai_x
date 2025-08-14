@@ -7,5 +7,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", lambda request: redirect("blog:index")),
     path("blog/", include("blog.urls")),
-
+    path("book/", include("book.urls")),    
 ]
