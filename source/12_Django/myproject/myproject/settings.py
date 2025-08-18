@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     "blog",
     "accounts",
     "book",
-    "django.contrib.humanize" # intconmma(세자리마다 ,) 필터 사용
+    "django.contrib.humanize", # intconmma(세자리마다 ,) 필터 사용
+    'article',
 ]
 
 MIDDLEWARE = [
