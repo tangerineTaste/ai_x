@@ -137,7 +137,14 @@ STATICFILES_DIRS = [
     
 ]
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# media 파일에 대한 URL Prefix
+MEDIA_URL = '/media/'
+# 업로드된 파일을 저장할 디렉터리 경로. 이미지 파일 지원 라이브러리 pip install pillow
+MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
