@@ -15,8 +15,9 @@ def index(request):
     )
 
 def list(request):
+    print(request.user) # 로그인전:AnonymousUser 객체, 로그인후:User 객체
     post_list = Post.objects.all()
-    return render(request, 'blog/index.html', {'post_list': post_list})
+    return render(request, 'blog/index.html', {'post_list': post_list, 'user':request.user})
 
 def detail(request, post_id):
     # post = Post.objects.get(pk=post_id)
