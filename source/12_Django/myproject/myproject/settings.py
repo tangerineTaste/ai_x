@@ -153,3 +153,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 MEDIA_URL = '/media/'
 # 업로드된 파일을 저장할 디렉터리 경로. 이미지 파일 지원 라이브러리 pip install pillow
 MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST ='smtp.gmail.com'
+EMAIL_PORT=465
+EMAIL_HOST_USER = config("GMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD= config("GMAIL_HOST_PASSWORD")
+EMAIL_USE_SSL=True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
